@@ -17,7 +17,7 @@ ENJOY
 
 1)TO RUN kill_app_port.sh 
     
-    chmod + kill_app_port.sh
+    chmod +x kill_app_port.sh
     ./kill_app_port.sh
 
 KILL APPLICATION USING SPECIFIED PORT
@@ -26,7 +26,7 @@ enter "yes" to kill that application.
 
 2)TO RUN virtual_hosting.sh
 
-    chmod + virtual_hosting.sh
+    chmod +x virtual_hosting.sh
     ./virtual_hosting.sh 
 Complete automated Create virtual host configuration file for apache servers and automated
     
