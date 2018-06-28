@@ -15,11 +15,10 @@ Scripts for running lots of different works
 that's it 
 ENJOY
 
-1) TO RUN kill_app_port.sh 
-
-        chmod + kill_app_port.sh
+1)TO RUN kill_app_port.sh 
     
-        ./kill_app_port.sh
+    chmod + kill_app_port.sh
+    ./kill_app_port.sh
 
 KILL APPLICATION USING SPECIFIED PORT
 Run and enter the port no you want to know which application is using it
@@ -27,9 +26,8 @@ enter "yes" to kill that application.
 
 2)TO RUN virtual_hosting.sh
 
-        chmod + virtual_hosting.sh
-    
-        ./virtual_hosting.sh 
+    chmod + virtual_hosting.sh
+    ./virtual_hosting.sh 
 Complete automated Create virtual host configuration file for apache servers and automated
     
     a2ensite 
@@ -39,8 +37,9 @@ Create virtual hosting files for apache configuration without hassle
 just enter details and it will create file in default folder
 Enable and Disable website options are also avaiable 
 (ie a2ensite and a2dissite)
+It will also create document root folder in default folder
 
 Supported to linux (Redhat/Centos, Debian/Ubuntu OpenSuSE and Arch linux)
-
-It will also create document root folder in default folder
+Report bug to kmr.ashit1303@gmail.com
+still under development
 
