@@ -14,7 +14,7 @@ pkg update -y && pkg upgrade -y
 # Install necessary packages
 print_message "Installing necessary packages..."
 pkg install root-repo -y
-pkg install tsu figlet openssh git curl tree wget nano nodejs termux-services iptables -y
+pkg install tsu figlet openssh git curl tree wget nano nodejs termux-services iptables iproute2 nmap -y
 # Install MariaDB
 print_message "Installing MariaDB..."
 pkg install -y mariadb
