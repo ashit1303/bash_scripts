@@ -107,13 +107,8 @@ fi
 # Change directory to the Sonic repository
 pushd sonic > /dev/null
 
-# Run release tasks
-ABSPATH=$(cd "$(dirname "$0")"; pwd)
-BASE_DIR="$ABSPATH/../"
-
 rc=0
 
-pushd "$BASE_DIR" > /dev/null
 echo "Executing release steps for Sonic v$SONIC_VERSION..."
 release_for_architecture "$TARGET_ARCH" "gnu" "$TARGET_ARCH"
 rc=$?
