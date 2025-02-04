@@ -14,7 +14,9 @@ pkg update -y && pkg upgrade -y
 # Install necessary packages
 print_message "Installing necessary packages..."
 pkg install root-repo -y
-pkg install tsu figlet openssh git curl tree wget nano nodejs termux-services iptables iproute2 nmap -y
+pkg install tsu figlet openssh git curl tree wget nano nodejs termux-services iptables iproute2 nmap arp-scan -y
+# sudo arp-scan  --localnet
+# sudo nmap -sS -p- 192.168.97.47
 # Install MariaDB
 print_message "Installing MariaDB..."
 pkg install -y mariadb
