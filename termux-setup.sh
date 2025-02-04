@@ -19,8 +19,16 @@ pkg install tsu figlet openssh git curl tree wget nano nodejs termux-services ip
 print_message "Installing MariaDB..."
 pkg install -y mariadb
 
+# Install Ollama
+https://github.com/ashit1303/bash_scripts/releases/download/termux-ollama-build/ollama
+chmod +x ollama
+mv ollama $PREFIX/bin/
+# ollama run qwen2.5-coder:0.5b
+
 #Setting up termux
 print_message "Setting up termux..."
+
+
 
 # installing zincsearch 
 curl -L https://raw.githubusercontent.com/ashit1303/termux-zincsearch-install/main/termux-zincsearch-install.sh > termux-zincsearch-install.sh
@@ -29,7 +37,8 @@ chmod +x termux-zincsearch-install.sh
 INC_FIRST_ADMIN_USER=admin ZINC_FIRST_ADMIN_PASSWORD=your_password zincsearch
 
 
-echo "figlet -f slant 'Termux'" >> ../bash.bashrc
+echo "ollama serve" >> ../bash.bashrc 
+echo "figlet -f slant 'Termux'" >> ../bash.bashrc 
 echo "PS1='\[\e[1;32m\]\u@\h:\[\e[0m\]\[\e[1;34m\]$(if [[ "$PWD" == "$HOME/" ]]; then echo "~/"; else echo "~/\W"; fi)\[\e[0m\]\$' " >> ../bash.bashrc
 
 # Initialize Mariadb data directory
