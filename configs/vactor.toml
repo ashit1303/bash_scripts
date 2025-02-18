@@ -1,0 +1,32 @@
+# Global configuration
+data_dir = "~/.vector/data"
+
+# Sources
+[sources.system_metrics]
+type = "host_metrics"
+scrape_interval_secs = 15
+
+[sources.file_logs]
+type = "file"
+include = ["/var/log/**/*.log"]
+ignore_older_secs = 600
+
+# Transforms
+[transforms.parse_logs]
+type = "remap"
+inputs = ["file_logs"]
+source = '''
+. = parse_regex!(.message, r'^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (?P<level>\w+) (?P<message>.*)$')
+'''
+
+# Sinks
+[sinks.victoria_metrics]
+type = "prometheus_remote_write"
+inputs = ["system_metrics"]
+endpoint = "http://localhost:8428/api/v1/write"
+
+[sinks.console]
+type = "console"
+inputs = ["parse_logs"]
+encoding.codec = "json"
+

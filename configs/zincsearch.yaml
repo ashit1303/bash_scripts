@@ -1,0 +1,29 @@
+server:
+  port: 4080
+  address: "127.0.0.1"
+
+data:
+  path: "~/.zincsearch/data"
+  storage_mode: "disk"
+
+auth:
+  admin_user: "admin"
+  admin_password: "Complexpass@123"
+
+telemetry:
+  enabled: false
+
+search:
+  min_score: 0.1
+  highlight_tags:
+    pre: "<mark>"
+    post: "</mark>"
+
+index:
+  batch_size: 1000
+  shard_num: 1
+  settings:
+    analysis:
+      analyzer:
+        default:
+          type: "standard"
