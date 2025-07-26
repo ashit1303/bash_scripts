@@ -1,29 +1,18 @@
-# bash_scripts
-Scripts for running lots of different works
-#To run files 
+# BASH SCRIPTS
+For ease of installation of tools, Scripts has been created.
+Following tools are supported 
 
-1)Download
+## With Termux Support -> LIFTBRIDGE | OLLAMA | SONIC SEARCH | VECTOR | VICTORIA METRICS | ZINCSEARCH 
+```bash
+chmod +x file_name_here    
+./file_name_here
+```
 
-2)Make it a executable file with 
-    
-    chmod +x file_name_here
+## GENERIC  -> ALL OF ABOVE | REALTIME TOOLS { EMQX | FLINK | KAFKA | QUEST DB | MONGODB }
 
-3)Run with following command (<--- sudo permissions needed to execute some commands --->)
-    
-    ./file_name_here
-    
-that's it 
-ENJOY
-
--)TO RUN kill_app_port.sh 
-    
-    chmod +x kill_app_port.sh
-    ./kill_app_port.sh
-
-KILL APPLICATION USING SPECIFIED PORT
-Run and enter the port no you want to know which application is using it
-enter "yes" to kill that application.
+```bash
+./real-time-tools.sh 
+```
 
 Report any bugs to kmr.ashit1303@gmail.com
-
 

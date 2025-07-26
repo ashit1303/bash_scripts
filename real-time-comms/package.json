@@ -1,0 +1,14 @@
+{
+  "name": "real-time-comms",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "bg-run": "npm i && node mqtt-kafka.js & ",
+    "run": "npm i && node mqtt-kafka.js > logs.js "
+  },
+  "dependencies": {
+    "kafka-js": "^0.0.0",
+    "mqtt": "^5.13.3"
+  }
+}
